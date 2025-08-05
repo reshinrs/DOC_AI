@@ -1,0 +1,83 @@
+.header {
+    height: var(--header-height);
+    background-color: var(--container-color);
+    box-shadow: 0 2px 4px hsla(0, 0%, 1%, .1);
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: background-color 0.3s;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.logo {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    font-size: var(--h2-font-size);
+}
+.logo span {
+    color: var(--primary-color);
+}
+.navMenu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.navLink {
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+    transition: color .3s;
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent;
+}
+.navLink:hover {
+    color: var(--primary-color);
+}
+.navLink.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+.themeToggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.logoutBtn {
+    background: none;
+    border: none;
+    color: var(--danger-color);
+    cursor: pointer;
+    font-weight: var(--font-medium);
+    padding: 0;
+}
+.logoutBtn:hover {
+    text-decoration: underline;
+}
+.separator {
+    width: 1px;
+    height: 24px;
+    background-color: var(--border-color);
+}
+.uploadBtn {
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 0 1rem;
+    }
+}

@@ -1,0 +1,47 @@
+.statCard {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    width: 100%;
+    /* Button reset styles */
+    background-color: var(--container-color);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius);
+    cursor: pointer;
+    text-align: left;
+    transition: border-color 0.3s, transform 0.2s;
+}
+
+.statCard:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.statCard.active {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px hsla(207, 90%, 54%, 0.2);
+}
+
+.iconWrapper {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.statInfo h3 {
+    font-size: var(--biggest-font-size);
+    margin: 0;
+    color: var(--title-color);
+}
+
+.statInfo p {
+    margin: 0;
+    color: var(--text-color-light);
+    font-weight: var(--font-medium);
+}

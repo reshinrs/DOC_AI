@@ -1,0 +1,199 @@
+/* === GOOGLE FONTS === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* === CSS VARIABLES === */
+:root {
+  --header-height: 3.5rem;
+  
+  /* Colors */
+  --primary-color: #007bff;
+  --primary-color-alt: #0069d9;
+  --title-color: #333;
+  --text-color: #555;
+  --text-color-light: #888;
+  --body-color: #f0f2f5;
+  --container-color: #fff;
+  --border-color: #ddd;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --info-color: #17a2b8;
+  --scrollbar-thumb-color: #c1c1c1;
+  --scrollbar-track-color: #f1f1f1;
+
+  /* Font & Typography */
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --tiny-font-size: 0.625rem;
+
+  /* Font Weight */
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /* Box Shadow */
+  --shadow: 0 4px 12px hsla(220, 18%, 45%, 0.15);
+
+  /* Border Radius */
+  --radius: 0.5rem;
+}
+
+/* === DARK THEME VARIABLES === */
+[data-theme='dark'] {
+  --title-color: #f1f1f1;
+  --text-color: #bfbfbf;
+  --body-color: #18191a;
+  --container-color: #242526;
+  --border-color: #3a3b3c;
+  --shadow: 0 4px 12px hsla(0, 0%, 0%, 0.2);
+  --scrollbar-thumb-color: #555;
+  --scrollbar-track-color: #242526;
+}
+
+/* === SCROLLBAR STYLES === */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* === BASE STYLES === */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body, button, input, textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* === REUSABLE CSS CLASSES === */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+}
+.main {
+  padding: calc(var(--header-height) + 2rem) 0 2rem;
+}
+.section {
+  padding: 4rem 0 2rem;
+}
+.section__title {
+  font-size: var(--h1-font-size);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.card {
+  background-color: var(--container-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: var(--font-medium);
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--primary-color-alt);
+}
+.btn--danger {
+  background-color: var(--danger-color);
+}
+.btn--danger:hover {
+  background-color: #c82333;
+}
+.btn--secondary {
+  background-color: #6c757d;
+}
+.btn--secondary:hover {
+  background-color: #5a6268;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  outline: none;
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+.form-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px hsla(207, 90%, 54%, 0.2);
+}
+
+/* === RESPONSIVE TYPOGRAPHY === */
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: var(--small-font-size);
+  }
+  .main {
+    padding-top: calc(var(--header-height) + 1rem);
+  }
+}
+@media screen and (max-width: 350px) {
+  :root {
+    --biggest-font-size: 1.5rem;
+    --h1-font-size: 1.25rem;
+    --h2-font-size: 1rem;
+    --h3-font-size: 0.938rem;
+  }
+}

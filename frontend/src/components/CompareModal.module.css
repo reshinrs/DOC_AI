@@ -1,0 +1,150 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+.modalContent {
+    background: var(--container-color);
+    padding: 2rem;
+    border-radius: var(--radius);
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+.closeButton {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+.docList {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+.docItem {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.docItem:last-child {
+    border-bottom: none;
+}
+.docItem input {
+    margin-right: 1rem;
+    width: 18px;
+    height: 18px;
+}
+.modalActions {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+/* Styles for Info Modal */
+.infoModalContent {
+    max-height: 90vh;
+}
+.infoGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.infoItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.infoItem strong {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    font-weight: var(--font-medium);
+}
+.infoItem span {
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+    word-break: break-all;
+}
+.infoItemFull {
+    grid-column: 1 / -1; /* Make snippet span full width */
+    margin-top: 1rem;
+}
+.infoItemFull strong {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    font-weight: var(--font-medium);
+}
+.snippet {
+    background-color: var(--body-color);
+    padding: 0.75rem;
+    border-radius: var(--radius);
+    font-style: italic;
+    color: var(--text-color);
+    font-size: var(--small-font-size);
+    margin-top: 0.5rem;
+    max-height: 100px;
+    overflow-y: auto;
+}
+/* ... existing modalOverlay, modalContent, modalHeader, closeButton, etc. styles ... */
+
+.infoModalContent {
+    max-height: 90vh;
+    overflow-y: auto; /* Allow scrolling for long content */
+}
+
+.infoSection {
+    margin-bottom: 1.5rem;
+}
+.infoSection h4 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.infoGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.infoItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.infoItem strong {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    font-weight: var(--font-medium);
+}
+.infoItem span {
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+    word-break: break-word;
+}

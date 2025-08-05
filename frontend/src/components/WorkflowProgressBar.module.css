@@ -1,0 +1,105 @@
+.progressBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 1.5rem 0;
+    width: 90%;
+    left: 5%;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    background-color: var(--border-color);
+    width: 100%;
+    z-index: 1;
+}
+
+.lineProgress {
+    height: 100%;
+    background-color: var(--success-color);
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.node {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--container-color);
+    border: 4px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+    cursor: default;
+    transition: border-color .3s;
+}
+
+.node.completed {
+    border-color: var(--success-color);
+}
+.node.active {
+    border-color: var(--primary-color);
+    animation: pulse 1.5s infinite;
+}
+.node.failed {
+    border-color: var(--danger-color);
+}
+
+.nodeIcon {
+    font-size: 1.2rem;
+    color: var(--border-color);
+}
+.node.completed .nodeIcon, .node.active .nodeIcon {
+    color: var(--success-color);
+}
+.node.failed .nodeIcon {
+    color: var(--danger-color);
+}
+.node.active .nodeIcon {
+    color: var(--primary-color);
+}
+
+.node .tooltip {
+    visibility: hidden;
+    width: 160px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: var(--small-font-size);
+}
+.node .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+.node:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 hsla(207, 90%, 54%, 0.4); }
+  70% { box-shadow: 0 0 0 10px hsla(207, 90%, 54%, 0); }
+  100% { box-shadow: 0 0 0 0 hsla(207, 90%, 54%, 0); }
+}
