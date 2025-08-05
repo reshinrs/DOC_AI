@@ -1,4 +1,4 @@
-# MongoDB
+.env 
 # Replace <username>, <password>, and the cluster URL with your actual credentials from MongoDB Atlas
 MONGO_URI=mongodb://localhost:27017/database name
 #mongodb+srv://<username>:<password>@cluster0.itifsmb.mongodb.net/<databasename?retryWrites=true&w=majority&appName=Cluster0
@@ -16,3 +16,7 @@ EMAIL_HOST=smtp.gmail.com
 EMAIL_PORT=587
 EMAIL_USER=your mail
 EMAIL_PASS=your 16 digit security key
+
+This file need to be included in the backend folder before execution
+The Frontend folder runs on the command(npm run dev).
+The backend folfer runs on the command(npm start).
