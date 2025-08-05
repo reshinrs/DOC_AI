@@ -1,0 +1,18 @@
+# MongoDB
+# Replace <username>, <password>, and the cluster URL with your actual credentials from MongoDB Atlas
+MONGO_URI=mongodb://localhost:27017/database name
+#mongodb+srv://<username>:<password>@cluster0.itifsmb.mongodb.net/<databasename?retryWrites=true&w=majority&appName=Cluster0
+
+
+
+# JWT
+JWT_SECRET=a_very_secret_key_for_json_web_token_that_is_long_and_secure
+
+# Gemini API
+GEMINI_API_KEY=gemini api key
+
+# Nodemailer (for Email Notifications)
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USER=your mail
+EMAIL_PASS=your 16 digit security key
